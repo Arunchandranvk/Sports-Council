@@ -14,7 +14,7 @@ import {
 function AtheletHome() {
     const fetchAsideItems = () => {
         const asideObj = [
-          { text: "User Profile", link: "/user-profile", icon: "th-large" },
+          { text: "User Profile", link: "/", icon: "th-large" },
           {
             text: "Sponsors",
             link: "",

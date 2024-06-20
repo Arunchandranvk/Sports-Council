@@ -69,7 +69,7 @@ const Home = () => {
                     <MDBCol md="5">
                       <MDBCardImage
                         style={{ height: "200px", width: "100%" }}
-                        src={i.image}
+                        src="http://localhost:8000/3.jpeg"
                         alt="..."
                       />
                     </MDBCol>

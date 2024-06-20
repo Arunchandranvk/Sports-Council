@@ -17,7 +17,7 @@ import { getEventListApi } from "../../Services/Allapis";
 export const SponsorHome = () => {
   const fetchAsideItems = () => {
     const asideObj = [
-      { text: "Dashboard", link: "/college-home", icon: "th-large" },
+      { text: "Dashboard", link: "/sponsor/home", icon: "th-large" },
       {
         text: "Available Athletes",
         link: "/sponsor/available-athletes",
@@ -77,7 +77,7 @@ export const SponsorHome = () => {
                   <MDBCol md="5">
                     <MDBCardImage
                       style={{ height: "200px", width: "100%" }}
-                      src={i.image}
+                      src="http://localhost:8000/3.jpeg"
                       alt="..."
                     />
                   </MDBCol>

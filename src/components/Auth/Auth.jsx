@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./authstyle.css";
 import { loginAPI, registerAPI } from "../../services/allAPI";
 import { ToastContainer, toast } from "react-toastify";
@@ -12,11 +12,12 @@ function Auth() {
     username: "",
     email: "",
     password: "",
-    is_user: false,
-    is_sponser: false,
+    is_student: false,
+    is_sponsor: false,
     is_college: false,
   });
   
+
 
   const navigate = useNavigate();
 
@@ -24,9 +25,9 @@ function Auth() {
     setSignUpMode(!signUpMode);
     setUserdata({
       ...userdata,
-      is_user: true,
+      is_student: true,
       is_college: false,
-      is_sponser: false,
+      is_sponsor: false,
     });
   };
 
@@ -34,33 +35,34 @@ function Auth() {
 
   const handleTabChange = (tabIndex) => {
     setActiveTab(tabIndex);
+    console.log(tabIndex)
     if (tabIndex === 1) {
       setUserdata({
         ...userdata,
-        is_user: true,
+        is_student: true,
         is_college: false,
-        is_sponser: false,
+        is_sponsor: false,
       });
     } else if (tabIndex === 2) {
       setUserdata({
         ...userdata,
-        is_user: false,
+        is_student: false,
         is_college: true,
-        is_sponser: false,
+        is_sponsor: false,
       });
     } else if (tabIndex === 3) {
       setUserdata({
         ...userdata,
-        is_user: false,
+        is_student: false,
         is_college: false,
-        is_sponser: true,
+        is_sponsor: true,
       });
     } else {
       setUserdata({
         ...userdata,
-        is_user: false,
+        is_student: false,
         is_college: false,
-        is_sponser: false,
+        is_sponsor: false,
       });
     }
   };
@@ -73,8 +75,8 @@ function Auth() {
       username,
       email,
       password,
-      is_user,
-      is_sponser,
+      is_student,
+      is_sponsor,
       is_college,
     } = userdata;
     try {
@@ -133,7 +135,7 @@ function Auth() {
           }
           else if(result?.data?.is_student
           ){
-            navigate('/athletes/home')
+            navigate('/athletes-home')
             toast.success("Logged in athletes");
           }
           else if(result?.data?.superuser){
