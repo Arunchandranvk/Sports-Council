@@ -77,7 +77,7 @@ export const SponsorHome = () => {
                   <MDBCol md="5">
                     <MDBCardImage
                       style={{ height: "200px", width: "100%" }}
-                      src="http://localhost:8000/3.jpeg"
+                      src="https://cdn.vectorstock.com/i/2000v/27/23/poster-design-for-fun-event-party-or-competition-vector-34502723.avif"
                       alt="..."
                     />
                   </MDBCol>
